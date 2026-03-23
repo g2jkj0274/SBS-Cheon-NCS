@@ -58,8 +58,8 @@ function CurriculumSection() {
         <div className="sec-subheader">
           <h3>이런 내용을 배워요</h3>
           <div className="slider-controls">
-            <button className="control-btn">{"<"}</button>
-            <button className="control-btn">{">"}</button>
+            {/* <button className="control-btn">{"<"}</button>
+            <button className="control-btn">{">"}</button> */}
           </div>
         </div>
 
