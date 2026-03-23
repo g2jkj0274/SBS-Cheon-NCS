@@ -32,7 +32,7 @@ function ScheduleSection() {
 
                 <div className="schedule-info-item">
                   <div className="schedule-info-label">수업 시간</div>
-                  <div className="schedule-info-value">월 ~ 금 / 09:20 ~ 13:20</div>
+                  <div className="schedule-info-value">월 ~ 금 / 09:00 ~ 13:00</div>
                 </div>
 
                 <div className="schedule-info-item">
