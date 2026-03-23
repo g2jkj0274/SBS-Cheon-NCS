@@ -38,9 +38,10 @@ function Hero() {
 
           <div className="hero-stat">
             <div className="val">
-              <em>최대</em> 85%
+              <em>최대</em> 100%
             </div>
-            <div className="key">훈련비 지원</div>
+            <div className="key">국취제 1유형 기준</div>
+            <div className="key">* 유형별 훈련비 지원율이 상이하니 고용센터로 확인 바랍니다.</div>
           </div>
         </div>
       </div>
