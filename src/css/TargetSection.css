@@ -1,0 +1,166 @@
+/* ==========================================================================
+   TargetSection 스타일 (추천 대상 및 기대 효과)
+   ========================================================================== */
+
+.target-section {
+  background: #fcfdfe; /* 너무 푸른기 도는 색 대신 아주 밝은 미색으로 변경 */
+  padding: 80px 48px;
+  border-top: 1px solid var(--gray2);
+}
+
+.target-section .section-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.target-layout {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr; /* 비율을 살짝 조정하여 균형감 확보 */
+  gap: 32px; /* 간격을 40px -> 32px로 조여서 더 응집력 있게 */
+  margin-top: 48px;
+}
+
+/* 왼쪽: 수강 추천 대상 카드 */
+.target-left .target-card {
+  background: #fff;
+  border: 1px solid var(--gray2);
+  border-radius: var(--radius);
+  padding: 40px; /* 패딩을 넓혀서 여백의 미 강조 */
+  height: 100%;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+}
+
+.target-left h3 {
+  font-size: 24px;
+  color: var(--navy);
+  margin-bottom: 32px;
+  font-weight: 800;
+}
+
+.target-list {
+  display: grid;
+  gap: 24px;
+}
+
+.target-item {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start; /* 아이콘이 텍스트 첫 줄에 맞게 */
+}
+
+.target-bullet {
+  flex-shrink: 0;
+  width: 26px;
+  height: 26px;
+  background: var(--blue);
+  color: #fff;
+  border-radius: 8px; /* 완전 동그라미 대신 부드러운 사각형으로 변경 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.target-item-title {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 6px;
+}
+
+.target-item-desc {
+  font-size: 15px;
+  color: var(--gray4);
+  line-height: 1.6;
+}
+
+/* 오른쪽: 기대 효과 카드들 */
+.target-right {
+  display: grid;
+  gap: 24px;
+}
+
+.result-card {
+  padding: 36px;
+  border-radius: var(--radius);
+  background: linear-gradient(145deg, var(--navy), var(--navy2));
+  color: #fff;
+  box-shadow: 0 10px 25px rgba(10, 22, 40, 0.15);
+}
+
+.result-card.light {
+  background: #fff;
+  border: 1px solid var(--gray2);
+  color: var(--text);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+}
+
+.result-card h3 {
+  font-size: 20px;
+  margin-bottom: 20px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.result-label {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  color: #a5c0ff; /* 다크 배경에서 더 잘 보이는 하늘색 */
+  margin-bottom: 12px;
+  text-transform: uppercase;
+}
+
+.result-label.blue {
+  color: var(--blue);
+}
+
+.result-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 14px;
+}
+
+.result-list li {
+  position: relative;
+  padding-left: 24px;
+  font-size: 15px;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.result-list.dark li {
+  color: var(--gray4);
+}
+
+.result-list li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #5ce1ff; /* 체크 표시를 더 밝게 */
+  font-weight: 900;
+}
+
+.result-list.dark li::before {
+  color: var(--blue);
+}
+
+/* 반응형 모바일 최적화 */
+@media (max-width: 991px) {
+  .target-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .target-section {
+    padding: 60px 24px;
+  }
+  .target-left .target-card {
+    padding: 30px 20px;
+  }
+}

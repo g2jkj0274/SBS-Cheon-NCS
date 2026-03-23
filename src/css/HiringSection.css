@@ -1,0 +1,363 @@
+/* HIRING SECTION */
+.hiring-section {
+  background: #ffffff;
+  padding: 72px 48px;
+}
+
+.hiring-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin-bottom: 28px;
+}
+
+.hiring-card {
+  background: #fff;
+  border: 1px solid var(--gray2);
+  border-radius: var(--radius);
+  padding: 26px 22px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.hiring-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px rgba(10, 22, 40, 0.08);
+}
+
+.hiring-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #edf3ff, #dfeaff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  margin-bottom: 16px;
+}
+
+.hiring-card h3 {
+  font-size: 19px;
+  color: var(--navy);
+  line-height: 1.35;
+  margin-bottom: 10px;
+}
+
+.hiring-card p {
+  font-size: 14px;
+  color: var(--gray4);
+  line-height: 1.8;
+}
+
+.job-roadmap {
+  background: var(--gray1);
+  border: 1px solid var(--gray2);
+  border-radius: var(--radius);
+  padding: 24px;
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.roadmap-step {
+  flex: 1;
+  min-width: 220px;
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  background: #fff;
+  border: 1px solid var(--gray2);
+  border-radius: 12px;
+  padding: 18px;
+}
+
+.roadmap-no {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: var(--blue);
+  color: #fff;
+  font-size: 15px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.roadmap-title {
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--navy);
+  margin-bottom: 4px;
+}
+
+.roadmap-desc {
+  font-size: 14px;
+  color: var(--gray4);
+  line-height: 1.7;
+}
+
+.roadmap-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  color: var(--gray3);
+  font-weight: 800;
+}
+
+/* FAQ SECTION */
+.faq-section {
+  background: var(--gray1);
+  padding: 72px 48px;
+}
+
+.faq-list {
+  display: grid;
+  gap: 16px;
+}
+
+.faq-item {
+  background: #fff;
+  border: 1px solid var(--gray2);
+  border-radius: var(--radius);
+  padding: 24px;
+}
+
+.faq-item h3 {
+  font-size: 18px;
+  color: var(--navy);
+  line-height: 1.4;
+  margin-bottom: 10px;
+}
+
+.faq-item p {
+  font-size: 14px;
+  color: var(--gray4);
+  line-height: 1.8;
+}
+
+/* CTA SECTION */
+.cta-section {
+  background: #ffffff;
+  padding: 72px 48px;
+}
+
+.cta-box {
+  background: linear-gradient(135deg, var(--navy), var(--navy2));
+  border-radius: 20px;
+  padding: 42px 36px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-box::before {
+  content: '';
+  position: absolute;
+  top: -80px;
+  right: -80px;
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(26, 92, 255, 0.28) 0%, transparent 70%);
+}
+
+.cta-text {
+  position: relative;
+  z-index: 1;
+}
+
+.cta-mini-label {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  color: #8fb2ff;
+  margin-bottom: 14px;
+}
+
+.cta-box h2 {
+  font-size: clamp(28px, 3vw, 40px);
+  color: #fff;
+  line-height: 1.3;
+  margin-bottom: 14px;
+}
+
+.cta-box p {
+  font-size: 15px;
+  color: #d1dbef;
+  line-height: 1.8;
+  max-width: 560px;
+}
+
+.cta-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 1;
+}
+
+.cta-primary-btn,
+.cta-secondary-btn {
+  border: none;
+  border-radius: 10px;
+  padding: 15px 22px;
+  font-size: 15px;
+  font-weight: 800;
+  font-family: inherit;
+  cursor: pointer;
+  transition: transform 0.15s, opacity 0.2s;
+}
+
+.cta-primary-btn {
+  background: var(--cyan);
+  color: var(--navy);
+}
+
+.cta-secondary-btn {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.cta-primary-btn:hover,
+.cta-secondary-btn:hover {
+  transform: translateY(-2px);
+  opacity: 0.96;
+}
+
+/* FOOTER */
+.footer {
+  background: var(--navy);
+  color: #fff;
+  padding: 42px 48px 24px;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 28px;
+  flex-wrap: wrap;
+  padding-bottom: 28px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.footer-logo {
+  font-size: 16px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.footer-logo span {
+  background: var(--blue);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 4px;
+  letter-spacing: 0.05em;
+}
+
+.footer-brand p {
+  font-size: 14px;
+  color: #c7d2e8;
+  line-height: 1.8;
+  max-width: 420px;
+}
+
+.footer-links {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.footer-link-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-link-group h4 {
+  font-size: 14px;
+  color: #fff;
+  margin-bottom: 4px;
+}
+
+.footer-link-group a,
+.footer-link-group span {
+  font-size: 14px;
+  color: #c7d2e8;
+  text-decoration: none;
+}
+
+.footer-link-group a:hover {
+  color: #ffffff;
+}
+
+.footer-bottom {
+  padding-top: 18px;
+  font-size: 13px;
+  color: #99a9c8;
+}
+
+@media (max-width: 960px) {
+  .hiring-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .job-roadmap {
+    flex-direction: column;
+  }
+
+  .roadmap-arrow {
+    transform: rotate(90deg);
+  }
+}
+
+@media (max-width: 640px) {
+  .hiring-section,
+  .faq-section,
+  .cta-section,
+  .footer {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .hiring-section,
+  .faq-section,
+  .cta-section {
+    padding-top: 52px;
+    padding-bottom: 52px;
+  }
+
+  .faq-item,
+  .roadmap-step {
+    padding: 20px 18px;
+  }
+
+  .cta-box {
+    padding: 28px 20px;
+  }
+
+  .cta-actions {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .cta-primary-btn,
+  .cta-secondary-btn {
+    width: 100%;
+  }
+}
