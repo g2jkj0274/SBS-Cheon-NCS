@@ -1,7 +1,3 @@
-/* ==========================================================================
-   CurriculumSection 전용 스타일 (Scoped)
-   ========================================================================== */
-
 :root {
   --curriculum-bg: #121824;
   --curriculum-card: #1c2331;
@@ -11,11 +7,10 @@
   --curriculum-accent: #a855f7;
 }
 
-/* 1. 섹션 컨테이너 */
 .curriculum-section {
   background-color: var(--curriculum-bg) !important;
   padding: 80px 40px;
-  color: var(--curriculum-white); /* 섹션 내 기본 글자색 */
+  color: var(--curriculum-white);
 }
 
 .section-inner {
@@ -23,7 +18,6 @@
   margin: 0 auto;
 }
 
-/* 2. 헤더 영역 (텍스트 가독성 강화) */
 .curriculum-section .sec-label-accent {
   color: var(--curriculum-accent) !important;
   font-weight: 700;
@@ -33,18 +27,24 @@
 }
 
 .curriculum-section .sec-title {
-  color: var(--curriculum-white) !important; /* 강제 흰색 적용 */
+  color: var(--curriculum-white) !important;
   font-size: 36px;
   font-weight: 800;
-  line-height: 1.4;
+  line-height: 1.3;
   margin-bottom: 20px;
+  word-break: keep-all;
 }
 
 .curriculum-section .sec-desc {
-  color: var(--curriculum-gray) !important; /* 밝은 회색으로 가독성 확보 */
-  line-height: 1.6;
+  color: var(--curriculum-gray) !important;
+  line-height: 1.7;
   font-size: 16px;
   margin-bottom: 60px;
+  word-break: keep-all;
+}
+
+.desktop-break {
+  display: inline;
 }
 
 .curriculum-section .sec-subheader {
@@ -59,7 +59,6 @@
   font-size: 24px;
 }
 
-/* 3. 슬라이더 컨트롤 */
 .curriculum-section .slider-controls .control-btn {
   background: #2d3748;
   border: none;
@@ -76,7 +75,6 @@
   background: #4a5568;
 }
 
-/* 4. 그리드 및 카드 레이아웃 */
 .curriculum-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -95,7 +93,6 @@
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
 }
 
-/* 5. 카드 이미지/아이콘 영역 */
 .curriculum-card .card-image-area {
   width: 100%;
   height: 200px;
@@ -127,7 +124,6 @@
   z-index: -1;
 }
 
-/* 6. 카드 텍스트 콘텐츠 */
 .curriculum-card .card-content {
   padding: 24px;
 }
@@ -139,16 +135,17 @@
   margin-bottom: 12px;
   min-height: 52px;
   line-height: 1.4;
+  word-break: keep-all;
 }
 
 .curriculum-card .card-content p {
-  color: var(--curriculum-dim) !important; /* 설명글은 약간 톤다운된 회색 */
+  color: var(--curriculum-dim) !important;
   font-size: 14px;
   line-height: 1.6;
   margin-bottom: 20px;
+  word-break: keep-all;
 }
 
-/* 7. 태그 스타일 */
 .curriculum-card .card-tags {
   display: flex;
   gap: 8px;
@@ -165,14 +162,25 @@
   font-weight: 500;
 }
 
-/* 8. 반응형 처리 */
 @media (max-width: 768px) {
   .curriculum-section {
     padding: 60px 20px;
   }
+
   .curriculum-section .sec-title {
-    font-size: 28px;
+    font-size: 24px;
+    line-height: 1.35;
   }
+
+  .curriculum-section .sec-desc {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .desktop-break {
+    display: none;
+  }
+
   .curriculum-grid {
     grid-template-columns: 1fr;
   }

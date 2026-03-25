@@ -11,7 +11,9 @@ function Hero() {
         </h1>
 
         <p className="hero-sub">
-          Java · Spring을 중심으로 실무 프로젝트까지 완성하는 280시간 집중 과정
+          Java · Spring을 중심으로 
+          <br />
+          실무 프로젝트까지 완성하는 280시간 집중 과정
         </p>
 
         <div className="hero-stats">

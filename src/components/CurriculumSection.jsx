@@ -3,7 +3,7 @@ import { Code2, Globe, Server, Database, Lock, Rocket } from 'lucide-react';
 function CurriculumSection() {
   const curriculumData = [
     {
-      title: "Java 프로그래밍 기초 + 객체지향 (OOP)",
+      title: "프로그래밍 기초 + 객체지향 (OOP)",
       desc: "웹 개발을 위한 언어 기반을 다지고, 상속·다형성 등 객체지향적으로 프로그램을 설계하는 능력을 확보합니다.",
       tags: ["Java", "OOP", "컬렉션"],
       icon: <Code2 size={56} color="#a855f7" strokeWidth={1.5} />,
@@ -49,9 +49,13 @@ function CurriculumSection() {
             기초부터 배포·운영까지 <br />
             탄탄한 기본기를 완성하는 커리큘럼
           </h2>
+          {/* <p className="sec-desc">
+            프로그래밍 기초부터 백엔드 개발, 데이터베이스 설계, 보안, 배포까지 <br />
+            실제 서비스 개발 흐름을 따라 단계적으로 실력을 완성합니다.
+          </p> */}
           <p className="sec-desc">
-            잡플래닛, 원티드, 사람인 등 수많은 백엔드 개발자 공고를 분석하고 <br />
-            취업 성공을 위한 최적의 커리큘럼을 만들었습니다.
+            기초 문법부터 백엔드 개발과 배포까지 <br />
+            실무 흐름에 맞춰 차근차근 성장합니다.
           </p>
         </div>
 
