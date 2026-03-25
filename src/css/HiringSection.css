@@ -1,7 +1,26 @@
+/* ==========================================================================
+   HiringSection 스타일 (진로 방향, 로드맵, FAQ, CTA, Footer)
+   ========================================================================== */
+
 /* HIRING SECTION */
 .hiring-section {
   background: #ffffff;
   padding: 72px 48px;
+}
+
+/* 공통 텍스트 브레이크 설정 */
+.sec-title, 
+.sec-desc, 
+.hiring-card h3, 
+.hiring-card p, 
+.roadmap-title, 
+.roadmap-desc, 
+.faq-item h3, 
+.faq-item p, 
+.cta-box h2, 
+.cta-box p {
+  word-break: keep-all; /* 단어 단위 줄바꿈 */
+  overflow-wrap: break-word;
 }
 
 .hiring-grid {
@@ -49,6 +68,7 @@
   line-height: 1.8;
 }
 
+/* JOB ROADMAP */
 .job-roadmap {
   background: var(--gray1);
   border: 1px solid var(--gray2);
@@ -275,6 +295,7 @@
   color: #c7d2e8;
   line-height: 1.8;
   max-width: 420px;
+  word-break: keep-all;
 }
 
 .footer-links {
@@ -312,17 +333,26 @@
   color: #99a9c8;
 }
 
+/* 반응형 미디어 쿼리 최적화 */
 @media (max-width: 960px) {
   .hiring-grid {
     grid-template-columns: 1fr;
+    gap: 16px;
   }
 
   .job-roadmap {
     flex-direction: column;
+    padding: 20px;
+  }
+
+  .roadmap-step {
+    width: 100%;
+    min-width: auto;
   }
 
   .roadmap-arrow {
-    transform: rotate(90deg);
+    transform: rotate(90deg); /* 모바일에서는 아래 방향 화살표 */
+    padding: 4px 0;
   }
 }
 
@@ -338,8 +368,13 @@
   .hiring-section,
   .faq-section,
   .cta-section {
-    padding-top: 52px;
-    padding-bottom: 52px;
+    padding-top: 56px;
+    padding-bottom: 56px;
+  }
+
+  .sec-title {
+    font-size: 25px;
+    line-height: 1.4;
   }
 
   .faq-item,
@@ -348,16 +383,34 @@
   }
 
   .cta-box {
-    padding: 28px 20px;
+    padding: 32px 20px;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .cta-box p {
+    font-size: 14px;
   }
 
   .cta-actions {
     width: 100%;
     flex-direction: column;
+    gap: 10px;
   }
 
   .cta-primary-btn,
   .cta-secondary-btn {
     width: 100%;
+    padding: 16px;
+  }
+  
+  .footer-top {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 430px) {
+  .sec-title {
+    font-size: 22px;
   }
 }

@@ -1,3 +1,5 @@
+import React from 'react';
+
 function HiringSection() {
   return (
     <section className="hiring-section" id="hiring">
@@ -78,4 +80,4 @@ function HiringSection() {
   )
 }
 
-export default HiringSection
+export default HiringSection;

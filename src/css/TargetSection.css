@@ -3,7 +3,7 @@
    ========================================================================== */
 
 .target-section {
-  background: #fcfdfe; /* 너무 푸른기 도는 색 대신 아주 밝은 미색으로 변경 */
+  background: #fcfdfe;
   padding: 80px 48px;
   border-top: 1px solid var(--gray2);
 }
@@ -13,10 +13,22 @@
   margin: 0 auto;
 }
 
+/* 공통 텍스트 최적화 */
+.sec-title, 
+.sec-desc, 
+.target-left h3, 
+.target-item-title, 
+.target-item-desc, 
+.result-card h3, 
+.result-list li {
+  word-break: keep-all; /* 한글 단어 단위 줄바꿈 */
+  overflow-wrap: break-word;
+}
+
 .target-layout {
   display: grid;
-  grid-template-columns: 1.1fr 0.9fr; /* 비율을 살짝 조정하여 균형감 확보 */
-  gap: 32px; /* 간격을 40px -> 32px로 조여서 더 응집력 있게 */
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 32px;
   margin-top: 48px;
 }
 
@@ -25,7 +37,7 @@
   background: #fff;
   border: 1px solid var(--gray2);
   border-radius: var(--radius);
-  padding: 40px; /* 패딩을 넓혀서 여백의 미 강조 */
+  padding: 40px;
   height: 100%;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
 }
@@ -45,7 +57,7 @@
 .target-item {
   display: flex;
   gap: 20px;
-  align-items: flex-start; /* 아이콘이 텍스트 첫 줄에 맞게 */
+  align-items: flex-start;
 }
 
 .target-bullet {
@@ -54,7 +66,7 @@
   height: 26px;
   background: var(--blue);
   color: #fff;
-  border-radius: 8px; /* 완전 동그라미 대신 부드러운 사각형으로 변경 */
+  border-radius: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -67,6 +79,7 @@
   font-weight: 700;
   color: var(--navy);
   margin-bottom: 6px;
+  line-height: 1.4;
 }
 
 .target-item-desc {
@@ -100,7 +113,7 @@
   font-size: 20px;
   margin-bottom: 20px;
   font-weight: 700;
-  line-height: 1.4;
+  line-height: 1.5;
 }
 
 .result-label {
@@ -108,7 +121,7 @@
   font-size: 12px;
   font-weight: 800;
   letter-spacing: 0.1em;
-  color: #a5c0ff; /* 다크 배경에서 더 잘 보이는 하늘색 */
+  color: #a5c0ff;
   margin-bottom: 12px;
   text-transform: uppercase;
 }
@@ -129,7 +142,7 @@
   position: relative;
   padding-left: 24px;
   font-size: 15px;
-  line-height: 1.5;
+  line-height: 1.6;
   color: rgba(255, 255, 255, 0.9);
 }
 
@@ -141,7 +154,7 @@
   content: "✓";
   position: absolute;
   left: 0;
-  color: #5ce1ff; /* 체크 표시를 더 밝게 */
+  color: #5ce1ff;
   font-weight: 900;
 }
 
@@ -153,14 +166,57 @@
 @media (max-width: 991px) {
   .target-layout {
     grid-template-columns: 1fr;
+    margin-top: 32px;
   }
 }
 
 @media (max-width: 640px) {
   .target-section {
-    padding: 60px 24px;
+    padding: 56px 20px;
   }
+
+  .sec-title {
+    font-size: 26px;
+    line-height: 1.4;
+  }
+
   .target-left .target-card {
-    padding: 30px 20px;
+    padding: 32px 20px;
+  }
+
+  .target-left h3 {
+    font-size: 21px;
+    margin-bottom: 24px;
+  }
+
+  .target-item {
+    gap: 16px;
+  }
+
+  .target-item-title {
+    font-size: 16px;
+  }
+
+  .target-item-desc {
+    font-size: 14px;
+  }
+
+  .result-card {
+    padding: 28px 20px;
+  }
+
+  .result-card h3 {
+    font-size: 19px;
+  }
+}
+
+@media (max-width: 430px) {
+  .sec-title {
+    font-size: 23px;
+  }
+  
+  .result-list li {
+    font-size: 14px;
+    line-height: 1.5;
   }
 }
