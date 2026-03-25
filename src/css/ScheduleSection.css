@@ -4,6 +4,18 @@
   padding: 72px 48px;
 }
 
+/* 공통 텍스트 브레이크 설정 - 한글 단어 단위 줄바꿈 */
+.sec-title, 
+.sec-desc, 
+.schedule-card h3, 
+.process-title, 
+.process-desc, 
+.schedule-side-card h3, 
+.schedule-side-card p {
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+
 .schedule-layout {
   display: grid;
   grid-template-columns: minmax(0, 2fr) minmax(280px, 1fr);
@@ -68,6 +80,7 @@
   font-size: 14px;
   color: var(--gray4);
   font-weight: 600;
+  flex-shrink: 0; /* 라벨이 찌그러지지 않게 보호 */
 }
 
 .schedule-info-value {
@@ -75,6 +88,7 @@
   color: var(--navy);
   font-weight: 700;
   text-align: right;
+  word-break: keep-all;
 }
 
 /* PROCESS */
@@ -211,6 +225,7 @@
   opacity: 0.95;
 }
 
+/* MEDIA QUERIES */
 @media (max-width: 960px) {
   .schedule-layout {
     grid-template-columns: 1fr;
@@ -226,6 +241,11 @@
     padding: 52px 20px;
   }
 
+  .sec-title {
+    font-size: 24px;
+    line-height: 1.4;
+  }
+
   .schedule-card {
     padding: 22px 18px;
   }
@@ -233,13 +253,39 @@
   .schedule-info-item {
     flex-direction: column;
     align-items: flex-start;
+    gap: 6px;
   }
 
   .schedule-info-value {
     text-align: left;
+    width: 100%;
   }
 
   .schedule-side-card h3 {
     font-size: 21px;
+    line-height: 1.4;
+  }
+}
+
+@media (max-width: 430px) {
+  .schedule-side-card {
+    padding: 24px 18px;
+  }
+
+  .schedule-side-card h3 {
+    font-size: 20px;
+    line-height: 1.45;
+    letter-spacing: -0.01em;
+  }
+
+  .schedule-side-card p {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  /* 텍스트가 아주 좁은 화면에서 답답해 보이지 않게 자간/행간 조절 */
+  .process-desc {
+    font-size: 13.5px;
+    line-height: 1.6;
   }
 }

@@ -1,3 +1,5 @@
+import React from 'react';
+
 function ScheduleSection() {
   const moveToSection = (id) => {
     const target = document.getElementById(id)
@@ -12,8 +14,7 @@ function ScheduleSection() {
         <div className="sec-label">훈련 일정</div>
         <h2 className="sec-title">수업 일정과 신청 절차를 미리 확인하세요</h2>
         <p className="sec-desc">
-          훈련 시작일부터 수업 시간, 신청 순서까지 한 번에 확인할 수 있도록
-          정리했습니다.
+          훈련 시작일부터 수업 시간, 신청 순서까지 한 번에 확인할 수 있도록 정리했습니다.
         </p>
 
         <div className="schedule-layout">
@@ -104,10 +105,11 @@ function ScheduleSection() {
           <aside className="schedule-side">
             <div className="schedule-side-card">
               <div className="side-mini-label">상담 안내</div>
-              <h3>지금 문의하면<br />수강 가능 여부를 빠르게 확인할 수 있습니다</h3>
+              <h3>
+                지금 문의하면 수강 가능 여부를 빠르게 확인할 수 있습니다
+              </h3>
               <p>
-                정원 마감 전에 상담을 받아두면 카드 여부, 자부담, 신청 절차를
-                더 정확하게 안내받을 수 있습니다.
+                정원 마감 전에 상담을 받아두면 카드 여부, 자부담, 신청 절차를 더 정확하게 안내받을 수 있습니다.
               </p>
 
               <div className="side-highlight-list">
@@ -130,4 +132,4 @@ function ScheduleSection() {
   )
 }
 
-export default ScheduleSection
+export default ScheduleSection;

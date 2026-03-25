@@ -20,18 +20,23 @@
   margin-bottom: 12px;
 }
 
+/* 제목 및 설명글 줄바꿈 최적화 */
 .benefits-section .sec-title {
   font-size: 32px;
   color: var(--navy);
   font-weight: 800;
   margin-bottom: 16px;
   line-height: 1.3;
+  word-break: keep-all; /* 단어 단위 줄바꿈 */
+  overflow-wrap: break-word;
 }
 
 .benefits-section .sec-desc {
   font-size: 16px;
   color: var(--gray4);
   margin-bottom: 48px;
+  word-break: keep-all;
+  line-height: 1.6;
 }
 
 /* 그리드 레이아웃 */
@@ -65,7 +70,6 @@
   align-items: center;
   justify-content: center;
   margin-bottom: 16px;
-  color: var(--blue);
 }
 
 .benefit-card h3 {
@@ -73,12 +77,14 @@
   color: var(--navy);
   line-height: 1.4;
   margin-bottom: 12px;
+  word-break: keep-all; /* 카드 제목 줄바꿈 최적화 */
 }
 
 .benefit-card p {
   font-size: 14px;
   color: var(--gray4);
   line-height: 1.7;
+  word-break: keep-all; /* 카드 설명 줄바꿈 최적화 */
 }
 
 /* 반응형 */
@@ -89,10 +95,36 @@
 }
 
 @media (max-width: 640px) {
+  .benefits-section {
+    padding: 56px 20px; /* 좌우 여백 소폭 조정 */
+  }
+
   .benefits-grid {
     grid-template-columns: 1fr;
+    gap: 16px;
   }
-  .benefits-section {
-    padding: 56px 24px;
+
+  .benefits-section .sec-title {
+    font-size: 26px; /* 모바일에서 제목 크기 축소 */
+    margin-bottom: 12px;
+  }
+
+  .benefits-section .sec-desc {
+    font-size: 15px;
+    margin-bottom: 32px;
+  }
+
+  .benefit-card {
+    padding: 22px 20px;
+  }
+  
+  .benefit-card h3 {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 430px) {
+  .benefits-section .sec-title {
+    font-size: 23px; /* 아주 작은 화면 대응 */
   }
 }
