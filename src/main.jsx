@@ -2,7 +2,10 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 /* import './index.css' */
+import './css/Header.css'
 import './css/Hero.css'
+import './css/WhySpringSection.css'
+
 import './css/InfoSection.css'
 import './css/CurriculumSection.css'
 import './css/ScheduleSection.css'
