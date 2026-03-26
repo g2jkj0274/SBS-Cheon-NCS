@@ -22,11 +22,11 @@ function App() {
       <CurriculumSection />     {/*커리큘럼 소개*/}
                                 {/*학습 방식 (운영) */}         
       <BenefitsSection />
-
       <TargetSection />
-
       <HiringSection />
+
       <InfoSection />
+      
       <ScheduleSection />
       <FaqSection />
       <CtaSection />

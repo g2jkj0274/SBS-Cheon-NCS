@@ -9,8 +9,8 @@ function InfoSection() {
   return (
     <section className="info-section" id="info">
       <div className="section-inner">
-        <div className="sec-label">과정 정보</div>
-        <h2 className="sec-title">한눈에 보는 과정 개요</h2>
+        <div className="info-sec-label">과정 정보</div>
+        <h2 className="info-sec-title">한눈에 보는 과정 개요</h2>
 
         <div className="info-grid">
           <div className="info-card">
