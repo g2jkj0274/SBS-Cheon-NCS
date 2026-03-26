@@ -20,12 +20,12 @@ function App() {
       <WhySpringSection />      {/*문제 제기, 필요성 설득*/}
                                 {/*해결책 (교육 방향성)*/}
       <CurriculumSection />     {/*커리큘럼 소개*/}
-                                {/*학습 방식 (운영) */}
-                 
+                                {/*학습 방식 (운영) */}         
       <BenefitsSection />
-      <TargetSection />
-      <HiringSection />
 
+      <TargetSection />
+
+      <HiringSection />
       <InfoSection />
       <ScheduleSection />
       <FaqSection />

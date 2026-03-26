@@ -4,9 +4,9 @@ function TargetSection() {
   return (
     <section className="target-section" id="target">
       <div className="section-inner">
-        <div className="sec-label">추천 대상</div>
-        <h2 className="sec-title">이런 분들에게 추천합니다</h2>
-        <p className="sec-desc">
+        <div className="target-sec-label">추천 대상</div>
+        <h2 className="target-sec-title">이런 분들에게 추천합니다</h2>
+        <p className="target-sec-desc">
           처음 개발을 배우는 분부터, 웹 개발자로 취업을 준비하는 분까지 학습 목표에 맞게 도전할 수 있습니다.
         </p>
 
