@@ -4,20 +4,56 @@
 
 /* HIRING SECTION */
 .hiring-section {
+  --hiring-gray1: var(--gray1, #f4f6fb);
+  --hiring-gray2: var(--gray2, #e8ecf5);
+  --hiring-gray3: var(--gray3, #b0bcd4);
+  --hiring-gray4: var(--gray4, #6b7a99);
+  --hiring-navy: var(--navy, #0a1628);
+  --hiring-navy2: var(--navy2, #12223f);
+  --hiring-blue: var(--blue, #1a5cff);
+  --hiring-cyan: var(--cyan, #00c2e0);
+  --hiring-radius: var(--radius, 14px);
+
   background: #ffffff;
   padding: 72px 48px;
+  color: var(--hiring-navy);
+}
+
+.hiring-section .hiring-sec-label {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--hiring-blue);
+  letter-spacing: 0.08em;
+  margin-bottom: 12px;
+}
+
+.hiring-section .hiring-sec-title {
+  font-size: clamp(24px, 3vw, 38px);
+  font-weight: 800;
+  color: var(--hiring-navy);
+  line-height: 1.25;
+  margin-bottom: 12px;
+  letter-spacing: -0.02em;
+}
+
+.hiring-section .hiring-sec-desc {
+  font-size: 15px;
+  color: var(--hiring-gray4);
+  margin-bottom: 40px;
+  max-width: 700px;
 }
 
 /* 공통 텍스트 브레이크 설정 */
-.sec-title, 
-.sec-desc, 
-.hiring-card h3, 
-.hiring-card p, 
-.roadmap-title, 
-.roadmap-desc, 
-.faq-item h3, 
-.faq-item p, 
-.cta-box h2, 
+.hiring-section .hiring-sec-title,
+.hiring-section .hiring-sec-desc,
+.hiring-section .hiring-card h3,
+.hiring-section .hiring-card p,
+.hiring-section .roadmap-title,
+.hiring-section .roadmap-desc,
+.faq-item h3,
+.faq-item p,
+.cta-box h2,
 .cta-box p {
   word-break: keep-all; /* 단어 단위 줄바꿈 */
   overflow-wrap: break-word;
@@ -32,8 +68,8 @@
 
 .hiring-card {
   background: #fff;
-  border: 1px solid var(--gray2);
-  border-radius: var(--radius);
+  border: 1px solid var(--hiring-gray2);
+  border-radius: var(--hiring-radius);
   padding: 26px 22px;
   transition: transform 0.2s, box-shadow 0.2s;
 }
@@ -57,22 +93,22 @@
 
 .hiring-card h3 {
   font-size: 19px;
-  color: var(--navy);
+  color: var(--hiring-navy);
   line-height: 1.35;
   margin-bottom: 10px;
 }
 
 .hiring-card p {
   font-size: 14px;
-  color: var(--gray4);
+  color: var(--hiring-gray4);
   line-height: 1.8;
 }
 
 /* JOB ROADMAP */
 .job-roadmap {
-  background: var(--gray1);
-  border: 1px solid var(--gray2);
-  border-radius: var(--radius);
+  background: var(--hiring-gray1);
+  border: 1px solid var(--hiring-gray2);
+  border-radius: var(--hiring-radius);
   padding: 24px;
   display: flex;
   align-items: stretch;
@@ -88,7 +124,7 @@
   gap: 14px;
   align-items: flex-start;
   background: #fff;
-  border: 1px solid var(--gray2);
+  border: 1px solid var(--hiring-gray2);
   border-radius: 12px;
   padding: 18px;
 }
@@ -97,7 +133,7 @@
   width: 34px;
   height: 34px;
   border-radius: 50%;
-  background: var(--blue);
+  background: var(--hiring-blue);
   color: #fff;
   font-size: 15px;
   font-weight: 800;
@@ -110,13 +146,13 @@
 .roadmap-title {
   font-size: 16px;
   font-weight: 800;
-  color: var(--navy);
+  color: var(--hiring-navy);
   margin-bottom: 4px;
 }
 
 .roadmap-desc {
   font-size: 14px;
-  color: var(--gray4);
+  color: var(--hiring-gray4);
   line-height: 1.7;
 }
 
@@ -125,7 +161,7 @@
   align-items: center;
   justify-content: center;
   font-size: 22px;
-  color: var(--gray3);
+  color: var(--hiring-gray3);
   font-weight: 800;
 }
 
@@ -372,7 +408,9 @@
     padding-bottom: 56px;
   }
 
-  .sec-title {
+  .hiring-section .hiring-sec-title,
+  .faq-section .sec-title,
+  .cta-section .sec-title {
     font-size: 25px;
     line-height: 1.4;
   }
@@ -410,7 +448,9 @@
 }
 
 @media (max-width: 430px) {
-  .sec-title {
+  .hiring-section .hiring-sec-title,
+  .faq-section .sec-title,
+  .cta-section .sec-title {
     font-size: 22px;
   }
 }

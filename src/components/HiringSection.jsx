@@ -4,9 +4,9 @@ function HiringSection() {
   return (
     <section className="hiring-section" id="hiring">
       <div className="section-inner">
-        <div className="sec-label">진로 방향</div>
-        <h2 className="sec-title">수료 후 이런 방향으로 확장할 수 있습니다</h2>
-        <p className="sec-desc">
+        <div className="hiring-sec-label">진로 방향</div>
+        <h2 className="hiring-sec-title">수료 후 이런 방향으로 확장할 수 있습니다</h2>
+        <p className="hiring-sec-desc">
           과정 수료 후에는 웹 개발 전반의 흐름을 이해한 상태에서
           백엔드, 프론트엔드, 풀스택 방향으로 학습과 포트폴리오를 확장할 수 있습니다.
         </p>
